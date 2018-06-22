@@ -49,8 +49,13 @@ function initializeSignInScreenEventListeners() {
   $('#google-auth').on('click', function() {
     createPersistantSession(googleAuth);
   });
+  
+  $('#sign-in-screen-btn').on('click', function() {
+    createPersistantSession(emailAndPasswordAuth);
+  });  
 
   $('#sign-up-screen-btn').on('click', function(){
     navigate('sign-up-screen');
   });  
+
 }

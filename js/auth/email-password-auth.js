@@ -1,4 +1,5 @@
 function signUp() {
+  let name = $('#name').val();
   let email = $('#email').val();
   let password = $('#password').val();
   let passwordConfirmation = $('#password-confirmation').val();
@@ -17,9 +18,19 @@ function signUp() {
     alert('Passwords do not match');
   }
   else {
+    
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function (result) {
-        console.log('created account');
+        
+        var user = firebase.auth().currentUser;
+
+        user.updateProfile({
+          displayName: name,
+        }).then(function () {
+          // Update successful.
+        }).catch(function (error) {
+          // An error happened.
+        });
       })
       .catch(function (error) {
         // Handle Errors here.
@@ -29,4 +40,17 @@ function signUp() {
         alert(errorMessage);
       });
   }
+}
+
+function emailAndPasswordAuth() {
+  let email = $('#email').val();
+  let password = $('#password').val();
+
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    
+    alert(errorMessage);
+  });
 }

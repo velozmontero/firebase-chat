@@ -21,6 +21,13 @@ function SignUpScreen() {
 
     <div class="sign-up-inputs-container">
       <div class="sign-up-input-container">
+        <div class="sign-up-input-label">Name:</div>
+        <div class="sign-up-input-wrapper">
+          <input id="name" class="sign-up-input" type="text" />
+        </div>
+      </div>
+
+      <div class="sign-up-input-container">
         <div class="sign-up-input-label">Email:</div>
         <div class="sign-up-input-wrapper">
           <input id="email" class="sign-up-input" type="text" />
