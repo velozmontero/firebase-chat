@@ -49,6 +49,10 @@ function initializeSignInScreenEventListeners() {
   $('#google-auth').on('click', function() {
     createPersistantSession(googleAuth);
   });
+
+  $('#facebook-auth').on('click', function () {
+    createPersistantSession(facebookAuth);
+  });
   
   $('#sign-in-screen-btn').on('click', function() {
     createPersistantSession(emailAndPasswordAuth);

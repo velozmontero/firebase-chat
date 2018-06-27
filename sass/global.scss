@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}

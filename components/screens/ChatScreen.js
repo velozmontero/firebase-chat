@@ -2,6 +2,8 @@ let db = firebase.database();
 let messages = db.ref('messages/');
 
 function buildChatScreen(user) {
+  console.log('chat screen >>>');
+
   $('#loading-screen, #sign-in-screen, #sign-up-screen').fadeOut("fast", function () {
     $('#root').html(ChatScreen(user));
     initializeChatScreenEventListeners(user);
