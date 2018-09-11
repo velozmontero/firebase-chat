@@ -46,6 +46,8 @@ function emailAndPasswordAuth() {
   let email = $('#email').val();
   let password = $('#password').val();
 
+  console.log('sgning in');
+
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;

@@ -38,7 +38,7 @@ function SignInScreen() {
     
     <div class="btn-container">
       <div id="sign-up-screen-btn" class="btn accent-color-2">SIGN UP</div>
-      <div id="sign-in-btn" class="btn accent-color-1">SIGN IN</div>
+      <div id="sign-in-screen-btn" class="btn accent-color-1">SIGN IN</div>
     </div>
   `;
 

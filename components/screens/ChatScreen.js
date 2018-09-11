@@ -76,7 +76,7 @@ function initializeChatScreenEventListeners(user) {
         `<div class="msg-div ${side}">
             <div style="${margin}">
               
-            <img class="profile-img" src="${msg.img || '../../images/photo.jpg'}" height="40" width="auto" />
+            <img class="profile-img" src="${msg.img || '../img/photo.png'}" height="40" width="auto" />
            
             </div>
             <div style="flex-grow: 1; padding: 10px;" class="talk-bubble tri-right ${corner}">
